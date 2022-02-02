@@ -9,9 +9,9 @@
     "postinstall": "typesync --ignoredeps=dev && yarn check --integrity || yarn install --ignore-scripts && yarn-deduplicate"
   },
   "dependencies": {
-    "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
-    "next": "^12.0.9",
+    "@emotion/react": "11.7.1",
+    "@emotion/styled": "11.6.0",
+    "next": "12.0.9",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
