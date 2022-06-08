@@ -28,6 +28,8 @@
         "pathGroupsExcludedImportTypes": ["builtin"],
         "alphabetize": { "order": "asc", "caseInsensitive": true },
         "pathGroups": [
+          { "pattern": "react", "group": "external", "position": "before" },
+          { "pattern": "next", "group": "external", "position": "before" }
         ]
       }
     ],
@@ -38,5 +40,15 @@
       "warn",
       { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
     ]
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
   }
 }
