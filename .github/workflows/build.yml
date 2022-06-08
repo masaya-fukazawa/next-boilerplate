@@ -22,8 +22,8 @@ jobs:
             ~/.cache/Cypress
             build
             node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('yarn.lock') }}
-      - run: yarn install --frozen-lockfile
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
+      - run: npm ci
         if: steps.cache.outputs.cache-hit != 'true'
   Build:
     needs: Install
@@ -43,7 +43,7 @@ jobs:
             ~/.cache/Cypress
             build
             node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('yarn.lock') }}
-      - run: yarn install --frozen-lockfile
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
+      - run: npm ci
         if: steps.cache.outputs.cache-hit != 'true'
-      - run: yarn build
+      - run: npm run build
