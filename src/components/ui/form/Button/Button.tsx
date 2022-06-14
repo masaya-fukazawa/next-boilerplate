@@ -14,23 +14,31 @@ export const Button: FC<Props> = ({
   size = 'm',
   color = 'default',
   ...props
-}) =>
+}) => (
   <button
     {...props}
-    className={classNames(baseClassNames, sizeClassNames[size], colorClassNames[color])}
-  >{children}</button>
+    className={classNames(
+      baseClassNames,
+      sizeClassNames[size],
+      colorClassNames[color]
+    )}
+  >
+    {children}
+  </button>
+)
 
-const baseClassNames = 'py-sm px-md rounded-md border-solid shadow-lg text-bold border hover:opacity-75'
+const baseClassNames =
+  'py-sm px-md rounded-md border-solid shadow-lg text-bold border hover:opacity-75'
 
 const sizeClassNames: Record<Size, string> = {
   s: 'w-24',
   m: 'w-32',
   l: 'w-64',
-  full: 'w-full'
+  full: 'w-full',
 }
 
 const colorClassNames: Record<Color, string> = {
   primary: 'bg-sky-300 text-white border-sky-300',
   secondary: 'bg-neutral-300 text-white border-neutral-300',
-  default: 'text-slate-700 border-slate-700'
+  default: 'text-slate-700 border-slate-700',
 }

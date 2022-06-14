@@ -13,7 +13,8 @@
     "import",
     "unused-imports",
     "strict-dependencies",
-    "@typescript-eslint"
+    "@typescript-eslint",
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "rules": {
@@ -24,12 +25,20 @@
     "import/order": [
       "error",
       {
-        "groups": ["builtin", "external", "internal", ["parent", "sibling"], "object", "type", "index"],
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          ["parent", "sibling"],
+          "object",
+          "type",
+          "index"
+        ],
         "pathGroupsExcludedImportTypes": ["builtin"],
-        "alphabetize": { "order": "asc", "caseInsensitive": true },
+        "alphabetize": {"order": "asc", "caseInsensitive": true},
         "pathGroups": [
-          { "pattern": "react", "group": "external", "position": "before" },
-          { "pattern": "next", "group": "external", "position": "before" }
+          {"pattern": "react", "group": "external", "position": "before"},
+          {"pattern": "next", "group": "external", "position": "before"}
         ]
       }
     ],
@@ -38,7 +47,12 @@
     "unused-imports/no-unused-imports": "error",
     "unused-imports/no-unused-vars": [
       "warn",
-      { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
     ]
   },
   "settings": {

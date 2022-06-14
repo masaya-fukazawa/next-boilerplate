@@ -1,9 +1,6 @@
 module.exports = {
   mode: 'jit',
-  content: [
-    './src/components/**/*.tsx',
-    './src/pages/**/*.tsx'
-  ],
+  content: ['./src/components/**/*.tsx', './src/pages/**/*.tsx'],
   theme: {
     extend: {
       spacing: {
@@ -11,7 +8,7 @@ module.exports = {
         md: '1rem',
         lg: '1.5rem',
         xl: '2rem',
-      }
+      },
     },
   },
   plugins: [],

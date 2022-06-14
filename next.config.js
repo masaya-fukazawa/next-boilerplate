@@ -7,20 +7,22 @@ module.exports = {
     config.plugins.push(
       new webpack.ProvidePlugin({
         React: 'react',
-      }),
+      })
     )
-    config.optimization.minimizer.push(new ESBuildMinifyPlugin({
-      target: 'es2015',
-      css: true
-    }))
+    config.optimization.minimizer.push(
+      new ESBuildMinifyPlugin({
+        target: 'es2015',
+        css: true,
+      })
+    )
     config.module.rules.push({
       test: /\.tsx?$/,
       loader: 'esbuild-loader',
       options: {
         loader: 'tsx',
         target: 'es2015',
-        tsconfigRaw: require('./tsconfig.json')
-      }
+        tsconfigRaw: require('./tsconfig.json'),
+      },
     })
     return config
   },

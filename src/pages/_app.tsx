@@ -5,16 +5,19 @@ import {QueryClientProvider, QueryClient} from 'react-query'
 import {ReactQueryDevtools} from 'react-query/devtools'
 
 function MyApp({Component, pageProps}: AppProps) {
-  const queryClient = new QueryClient({defaultOptions: {
-    queries: {
-      refetchOnWindowFocus: false
-    }
-  }})
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        refetchOnWindowFocus: false,
+      },
+    },
+  })
   return (
     <QueryClientProvider client={queryClient}>
       <Component {...pageProps} />
       <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>)
+    </QueryClientProvider>
+  )
 }
 
 export default MyApp
