@@ -14,21 +14,18 @@ export const Button: FC<Props> = ({
   size = 'm',
   color = 'default',
   ...props
-}) => {
-  if (size === 'm') return null
-  return (
-    <button
-      {...props}
-      className={classNames(
-        baseClassNames,
-        sizeClassNames[size],
-        colorClassNames[color]
-      )}
-    >
-      {children}
-    </button>
-  )
-}
+}) => (
+  <button
+    {...props}
+    className={classNames(
+      baseClassNames,
+      sizeClassNames[size],
+      colorClassNames[color]
+    )}
+  >
+    {children}
+  </button>
+)
 
 const baseClassNames =
   'py-sm px-md rounded-md border-solid shadow-lg text-bold border hover:opacity-75'
