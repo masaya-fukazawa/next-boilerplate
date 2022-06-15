@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write ./src",
+    "format": "prettier --write '{**/*,*}.{js,ts,jsx,tsx}' --cache",
     "test": "jest",
     "e2e": "cypress open",
     "storybook": "start-storybook -p 6006",
