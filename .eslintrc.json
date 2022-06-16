@@ -9,8 +9,7 @@
     "next/core-web-vitals",
     "prettier"
   ],
-  "plugins": ["jest", "import", "unused-imports", "strict-dependencies", "@typescript-eslint"],
-  "parser": "@typescript-eslint/parser",
+  "plugins": ["jest", "import", "unused-imports", "strict-dependencies"],
   "rules": {
     // import/order
     "import/order": [
